@@ -88,6 +88,6 @@ end
   if won?(board)
     puts "Congratulations the winner #{current_player(board)}"
   elsif draw?(board)
-    puts "The game is draw"
+    puts "Cat's Game!"
 end
 end
