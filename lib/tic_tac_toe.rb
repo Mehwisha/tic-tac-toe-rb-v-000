@@ -90,6 +90,3 @@ end
     puts "The game is draw"
 end
 end
-
-
-
