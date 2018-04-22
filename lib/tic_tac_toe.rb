@@ -79,7 +79,15 @@ def winner(board)
   end
 end
 def play(board)
-  turn(board)
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
+  if valid_move?(board, index)
+    move(board, index)
+    display_board(board)
+  else
+    turn(board)
+  end
   turn_count = 0
   while turn_count < 9 || over?(board)
   turn_count+=1
