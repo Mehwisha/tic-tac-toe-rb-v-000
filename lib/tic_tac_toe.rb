@@ -79,7 +79,7 @@ def winner(board)
   end
 end
 def play(board)
-  input = gets
+  input = gets turn(board)
 #   puts "Welcome to Tic Tac Toe!"
 #   turn(board)
 #   turn_count = 0
