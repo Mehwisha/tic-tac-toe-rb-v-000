@@ -80,15 +80,13 @@ def winner(board)
 end
 def play(board)
   input = gets.turn(board)
-#   puts "Welcome to Tic Tac Toe!"
-#   turn(board)
-#   turn_count = 0
-#   while turn_count < 9 || over?(board)
-#   turn_count+=1
-# end
-#   if won?(board)
-#     puts "Congratulations the winner #{current_player(board)}"
-#   elsif draw?(board)
-#     puts "Cat's Game!"
-# end
+   turn_count = 0
+ while turn_count < 9 || over?(board)
+ turn_count += 1
+end
+  if won?(board)
+    puts "Congratulations the winner #{current_player(board)}"
+  elsif draw?(board)
+    puts "Cat's Game!"
+end
 end
