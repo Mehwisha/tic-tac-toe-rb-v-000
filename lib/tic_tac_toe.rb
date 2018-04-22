@@ -19,8 +19,8 @@ end
 def input_to_index(user_input)
   user_input.to_i - 1
 end
-def move(board, index, player)
-  board[index] = player
+def move(board, index, current_player)
+  board[index] = current_player
 end
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
@@ -79,21 +79,13 @@ def winner(board)
   end
 end
 def play(board)
-  puts "Please enter 1-9:"
-  input = gets.strip
-  index = input_to_index(input)
-  if valid_move?(board, index)
-    move(board, index)
-    display_board(board)
-  else
-    turn(board)
-  end
+  turn(board)
   turn_count = 0
   while turn_count < 9 || over?(board)
   turn_count+=1
 end
   if won?(board)
-    puts "Congratulations"
+    puts "Congratulations the winner #{current_player(board)}"
   elsif draw?(board)
     puts "The game is draw"
 end
